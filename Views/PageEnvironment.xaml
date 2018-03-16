@@ -1,0 +1,216 @@
+﻿<Page x:Class="EdibleFungusGreenhouse.Views.PageEnvironment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EdibleFungusGreenhouse.Views"
+      xmlns:control="clr-namespace:Utils;assembly=Utils"
+      mc:Ignorable="d" 
+      d:DesignHeight="860" d:DesignWidth="1440"
+      Title="PageEnvironment" Unloaded="Page_Unloaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StyleTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="Foreground" Value="#34ff13"/>
+                <Setter Property="Background" Value="#FF595959"/>
+                <Setter Property="Width" Value="140"/>
+                <Setter Property="Height" Value="44"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="748*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bg_greenhouse.png"/>
+        </Grid.Background>
+
+        <!--设置界面-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="420*"/>
+                <ColumnDefinition Width="600*"/>
+                <ColumnDefinition Width="420*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="114*"/>
+                <RowDefinition Height="520*"/>
+                <RowDefinition Height="115*"/>
+            </Grid.RowDefinitions>
+
+            <Border x:Name="BorderSet" Grid.Row="1" Grid.Column="1" Background="#FF333333" Opacity="0.8" CornerRadius="10" IsVisibleChanged="BorderSet_IsVisibleChanged">
+                <Viewbox>
+                    <Grid Margin="40 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="72"/>
+                            <RowDefinition Height="72"/>
+                            <RowDefinition Height="72"/>
+                            <RowDefinition Height="72"/>
+                            <RowDefinition Height="72"/>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="260"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="220"/>
+                        </Grid.ColumnDefinitions>
+                        <Border  Grid.ColumnSpan="3" BorderBrush="#FF666666" BorderThickness="0,2">
+                            <Label Content="设置" Foreground="White" FontSize="28" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+                        </Border>
+
+                        <!--温度设置-->
+                        <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <Label Content="温度设置：" Foreground="#FFEAEAEA" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxLowTemp" Style="{StaticResource StyleTextBox}"/>
+                        </WrapPanel>
+                        <Label Grid.Row="1" Grid.Column="1" FontSize="30" Content="-" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <WrapPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <TextBox x:Name="TextBoxHighTemp" Style="{StaticResource StyleTextBox}"/>
+                            <Label FontSize="20" Content="℃" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </WrapPanel>
+
+                        <!--湿度设置-->
+                        <WrapPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <Label Content="湿度设置：" Foreground="#FFEAEAEA" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxLowHumi" Style="{StaticResource StyleTextBox}"/>
+                        </WrapPanel>
+                        <Label Grid.Row="2" Grid.Column="1" FontSize="30" Content="-" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <WrapPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <TextBox x:Name="TextBoxHighHumi" Style="{StaticResource StyleTextBox}"/>
+                            <Label FontSize="20" Content="%rh" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </WrapPanel>
+
+                        <!--光照设置-->
+                        <WrapPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <Label Content="光照设置：" Foreground="#FFEAEAEA" FontSize="20" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxLowLight" Style="{StaticResource StyleTextBox}"/>
+                        </WrapPanel>
+                        <Label Grid.Row="3" Grid.Column="1" FontSize="30" Content="-" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <WrapPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <TextBox x:Name="TextBoxHighLight" Style="{StaticResource StyleTextBox}"/>
+                            <Label FontSize="20" Content="lx" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </WrapPanel>
+
+                        <!--风扇状态-->
+                        <WrapPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <Label Content="风扇状态：" Foreground="#FFEAEAEA" FontSize="20" VerticalAlignment="Center"/>
+                            <control:BulletCheckBox x:Name="CheckBoxFanStatus" IsEnabled="False" Background="#A9A9A9" CheckedBackground="#00B14B" 
+                                                    CheckedText="ON" Width="88" Height="36" Text="OFF"/>
+                        </WrapPanel>
+                        <Label Grid.Row="4" Grid.Column="1" FontSize="30" Content="-" Foreground="#FFEAEAEA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <!--电暖气状态-->
+                        <WrapPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                            <Label Content="电暖气状态：" Foreground="#FFEAEAEA" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <control:BulletCheckBox x:Name="CheckBoxHeaterStatus" IsEnabled="False" Background="#A9A9A9" CheckedBackground="#00B14B"
+                                    CheckedText="ON" Width="88" Height="36" Text="OFF"/>
+                        </WrapPanel>
+
+                        <!--提示-->
+                        <Label Grid.Row="5" Grid.ColumnSpan="3"  Content="提示：当温度高于区间，自动开启风扇，当温度低于该区间，自动开启&#xd;&#xa;加热器。"  VerticalAlignment="Center" Foreground="#FFC3BFBF" FontSize="15"/>
+
+                        <!--保存设置-->
+                        <Button x:Name="ButtonSave" Content="确定" Grid.Row="6" Background="#0084FF" Style="{StaticResource StyleButtonBaseBackground}" Width="180" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+                        <Button x:Name="ButtonCancel" Content="取消" Grid.Row="6" Grid.Column="2" Background="#999999" Style="{StaticResource StyleButtonBaseBackground}" Width="180" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                    </Grid>
+                </Viewbox>
+            </Border>
+        </Grid>
+
+        <!--状态区-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1140*"/>
+                <ColumnDefinition Width="300*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Background="#FF333333" Opacity="0.9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150*"/>
+                    <ColumnDefinition Width="150*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150*"/>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="100*"/>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="100*"/>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="100*"/>
+                    <RowDefinition Height="128*"/>
+                </Grid.RowDefinitions>
+
+                <!--风扇区域-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="110*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--风扇动画-->
+                    <Image x:Name="ImageFan" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="风扇" Grid.Column="1" Grid.Row="2" FontSize="16" Foreground="#FFC3BFBF" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+
+                <!--加热器区域-->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="110*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--加热器动画-->
+                    <Image x:Name="ImageHeater" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="加热器" Grid.Column="1" Grid.Row="2" FontSize="16" Foreground="#FFC3BFBF" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="当前温度：" Foreground="#FFC3BFBF" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <WrapPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label x:Name="LabTemValue" Foreground="#34ff13" FontSize="32" VerticalContentAlignment="Bottom"/>
+                    <Label Content="°C" Foreground="#34ff13" FontSize="20" VerticalContentAlignment="Bottom"/>
+                </WrapPanel>
+
+                <Label Grid.Row="3" Grid.Column="0" Content="当前湿度：" Foreground="#FFC3BFBF" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <WrapPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label x:Name="LabHumiValue" Foreground="#2aceda" FontSize="32" VerticalContentAlignment="Bottom"/>
+                    <Label Content="%rh" Foreground="#2aceda" FontSize="20" VerticalContentAlignment="Bottom"/>
+                </WrapPanel>
+
+                <Label Grid.Row="5" Grid.Column="0" Content="当前光照：" Foreground="#FFC3BFBF" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <WrapPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label x:Name="LabLightValue" Foreground="#ffae13" FontSize="32" VerticalContentAlignment="Bottom"/>
+                    <Label Content="lx" Foreground="#ffae13" FontSize="20" VerticalContentAlignment="Bottom"/>
+                </WrapPanel>
+
+                <Button x:Name="ButtonSet" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource StyleButtonBaseBorder}" 
+                        Content="设置" FontSize="20" Background="#0c3F95" BorderBrush="#287188" Width="120" Height="44" Click="ButtonSet_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

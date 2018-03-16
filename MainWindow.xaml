@@ -1,0 +1,38 @@
+﻿<Window x:Class="EdibleFungusGreenhouse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="880" Width="1460" BorderThickness="10" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="Images/icon_mushroom.ico" 
+        MouseMove="Window_MouseMove" AllowsTransparency="True" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+
+    <!--附加阴影效果-->
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="10" Color="#FF858484" Direction="90" ShadowDepth="3"/>
+    </Window.Effect>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="747*"/>
+        </Grid.RowDefinitions>
+        
+        <!--标题栏-->
+        <Grid x:Name="GridTitle" Panel.ZIndex="1" Background="#333333" Opacity="0.5" MouseDown="GridTitle_MouseDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="ButtonMin" Style="{StaticResource StyleButtonMin}" Click="ButtonMin_Click"/>
+                <Button x:Name="ButtonMax" Style="{StaticResource StyleButtonMax}" Click="ButtonMax_Click"/>
+                <Button x:Name="ButtonClose" Style="{StaticResource StyleButtonClose}" Click="ButtonClose_Click"/>
+            </StackPanel>
+            <!--标题栏-->
+            <WrapPanel  Grid.Row="1" Margin="20 0" ItemHeight="48" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <!--logo 或者 返回键-->
+                <CheckBox x:Name="CheckBoxReturn" VerticalAlignment="Center" Style="{StaticResource StyleCheckBoxReturn}" Click="CheckBoxReturn_Click"/>
+                <Label x:Name="LabelTitle"  FontSize="24" Foreground="#ffffff" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </WrapPanel>
+        </Grid>
+        <Frame x:Name="FrameMain" Panel.ZIndex="0" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

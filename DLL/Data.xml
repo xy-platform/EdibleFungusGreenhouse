@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>  
+<ProduceTable>
+  <Produce>
+    <Cardcode>E2005163430101982231181E</Cardcode>
+    <Name>特级XX</Name>
+    <CollectTime>2016.12.12</CollectTime>
+    <SaveTemperature>36</SaveTemperature>
+    <ShelfLife>常温下3个月，标准储藏条件下6个月</ShelfLife>
+  </Produce>
+</ProduceTable>

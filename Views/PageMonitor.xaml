@@ -1,0 +1,153 @@
+﻿<Page x:Class="EdibleFungusGreenhouse.Views.PageMonitor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:control="clr-namespace:Utils;assembly=Utils"
+      mc:Ignorable="d" 
+       d:DesignHeight="860" d:DesignWidth="1440"
+      Title="PageMonitor" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="112"/>
+            <RowDefinition Height="648*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bg_greenhouse.png"/>
+        </Grid.Background>
+
+        <!--录像界面-->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="320*"/>
+                <RowDefinition Height="328*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1120*"/>
+                <ColumnDefinition Width="320*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="2" Grid.Row="0" Margin="10" Background="#7F333333" BorderThickness="1" BorderBrush="Black" CornerRadius="10">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"></RowDefinition>
+                        <RowDefinition Height="270*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"></ColumnDefinition>
+                        <ColumnDefinition Width="270*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Ellipse Grid.Row="0" Grid.Column="0" Fill="Red" Height="auto"/>
+                    <Viewbox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left">
+                        <Label Content="REC" Foreground="White" FontSize="25"/>
+                    </Viewbox>
+
+                    <Image x:Name="ImageCamera" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--弹出警告框-->
+        <Grid x:Name="GridAlert" Grid.Row="1">
+           
+            <Grid.RowDefinitions>
+                <RowDefinition Height="149*"/>
+                <RowDefinition Height="320*"/>
+                <RowDefinition Height="149*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="390*"/>
+                <ColumnDefinition Width="660*"/>
+                <ColumnDefinition Width="390*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/EdibleFungusGreenhouse;component/Images/bg_dialog_red.png"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="182*"></RowDefinition>
+                    <RowDefinition Height="88*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="330*"/>
+                    <ColumnDefinition Width="270*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--提示内容-->
+                <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <WrapPanel>
+                        <Image Margin="30, 0" Width="60" Height="60" Source="/EdibleFungusGreenhouse;component/Images/ico_alarm.png"/>
+                        <Label Content="有火焰烟雾，请立即采取&#xd;&#xa;措施，检查阀门系统。" FontSize="25" Foreground="White" Margin="20,0"/>
+                    </WrapPanel>
+                </Viewbox>
+
+                <!--警报框关闭键-->
+                <Button Grid.Column="2"  Width="40" Height="40" Style="{StaticResource StyleButtonAlertClose}" Click="ButtonClose_Click"/>
+                <Button Grid.Row="2" Style="{StaticResource StyleButtonConfirm}" Click="ButtonClose_Click"/>
+                <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource StyleButtonCancel}" Click="ButtonClose_Click"/>
+            </Grid>
+            
+        </Grid>
+        
+        <!--控制界面-->
+        <Border Grid.Row="2" Background="#333333" Opacity="0.9">
+            <Viewbox>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="258"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="258"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="258"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="258"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="258"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--实时场景-->
+                    <WrapPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44" Margin="10, 0">
+                        <Label Content="实景录像：" Foreground="#afafae" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <control:BulletCheckBox x:Name="ChkCamera" Background="#A9A9A9" CheckedBackground="#00B14B" Click="ChkCamera_Click" CheckedText="ON" Width="110" Height="44" Text="OFF"/>
+                    </WrapPanel>
+                    
+                    <!--温度-->
+                    <WrapPanel Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                        <Label Content="温度：" Foreground="#00c0ff" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="LabTempValue" Foreground="#00c0ff" FontSize="18" BorderThickness="2" BorderBrush="#00c0ff" Width="140" Height="44" Background="#2e4366"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </WrapPanel>
+                    
+                    <!--湿度-->
+                    <WrapPanel Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                        <Label Content="湿度：" Foreground="#02bb3b" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="LabHumiValue" Foreground="#02bb3b" FontSize="18" BorderThickness="2" BorderBrush="#02bb3b" Width="140" Height="44" Background="#29452b"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </WrapPanel>
+
+                    <!--火焰监控-->
+                    <WrapPanel Grid.Column="6" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                        <Label Content="火焰监控：" Foreground="#acacac" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="LabFireState" Foreground="#acacac" FontSize="18" BorderThickness="2" BorderBrush="#acacac" Width="140" Height="44" Background="#4d4d4b"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </WrapPanel>
+
+                    <!--烟雾浓度-->
+                    <WrapPanel Grid.Column="8" HorizontalAlignment="Left" VerticalAlignment="Center" ItemHeight="44">
+                        <Label Content="烟雾浓度：" Foreground="#ff7849" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="LabSmokeState" Foreground="#ff7849" FontSize="18" BorderThickness="2" BorderBrush="#ff7849" Width="140" Height="44" Background="#673d2c"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </WrapPanel>
+                </Grid>
+            </Viewbox>
+        </Border>
+    </Grid>
+</Page>

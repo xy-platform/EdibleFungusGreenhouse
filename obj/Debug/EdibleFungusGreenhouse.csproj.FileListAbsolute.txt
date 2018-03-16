@@ -1,0 +1,17 @@
+E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\EdibleFungusGreenhouse.exe.config
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.csprojResolveAssemblyReference.cache
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\MainWindow.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Styles\BaseStyle.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Styles\CommonStyle.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageHome.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageMonitor.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\App.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\MainWindow.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageEnvironment.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageHome.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageManager.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageMonitor.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\App.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_Content.g.cs
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_MarkupCompile.cache
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_MarkupCompile.lref
