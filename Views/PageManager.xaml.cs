@@ -35,5 +35,10 @@ namespace EdibleFungusGreenhouse.Views
             GridScanResult.Visibility = Visibility.Collapsed;
             GridScan.Visibility = Visibility.Visible;
         }
+
+        private void BeginScan(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         
         <!--标题栏-->
-        <Grid x:Name="GridTitle" Panel.ZIndex="1" Background="#333333" Opacity="0.5" MouseDown="GridTitle_MouseDown">
+        <Grid x:Name="GridTitle" Panel.ZIndex="1" Background="Black" Opacity="0.5" MouseDown="GridTitle_MouseDown">
             <Grid.RowDefinitions>
                 <RowDefinition Height="32"/>
                 <RowDefinition Height="*"/>
@@ -33,6 +33,6 @@
                 <Label x:Name="LabelTitle"  FontSize="24" Foreground="#ffffff" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </WrapPanel>
         </Grid>
-        <Frame x:Name="FrameMain" Panel.ZIndex="0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="FrameMain" Grid.Row="0" Panel.ZIndex="0" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

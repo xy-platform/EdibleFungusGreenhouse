@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\
+E:\GitHub\EdibleFungusGreenhouse\obj\Debug\
 EdibleFungusGreenhouse
 none
 false
 DEBUG;TRACE
-E:\DotNet\Git\EdibleFungusGreenhouse\App.xaml
+E:\GitHub\EdibleFungusGreenhouse\App.xaml
 7-1987474411
 7-2058486141
-14-1211228809
-16-662006240
+18336884497
+16-1341916889
 MainWindow.xaml;Styles\BaseStyle.xaml;Styles\CommonStyle.xaml;Views\PageEnvironment.xaml;Views\PageHome.xaml;Views\PageManager.xaml;Views\PageMonitor.xaml;
 
 True

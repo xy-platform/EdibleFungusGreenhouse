@@ -1,4 +1,8 @@
 E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\EdibleFungusGreenhouse.exe.config
+E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\EdibleFungusGreenhouse.exe
+E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\EdibleFungusGreenhouse.pdb
+E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\DeviceBase.dll
+E:\DotNet\Git\EdibleFungusGreenhouse\bin\Debug\Utils.dll
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.csprojResolveAssemblyReference.cache
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\MainWindow.baml
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Styles\BaseStyle.baml
@@ -15,3 +19,12 @@ E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\App.g.cs
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_Content.g.cs
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_MarkupCompile.cache
 E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse_MarkupCompile.lref
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageEnvironment.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\Views\PageManager.baml
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.g.resources
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.Properties.Resources.resources
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.csproj.GenerateResource.Cache
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.exe
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.pdb
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.csproj.CoreCompileInputs.cache
+E:\DotNet\Git\EdibleFungusGreenhouse\obj\Debug\EdibleFungusGreenhouse.csproj.CopyComplete
