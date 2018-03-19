@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
 
             <control:ScanCheckBox x:Name="CheckBoxScan" Grid.Row="1" Grid.Column="1" Width="auto" Height="auto"/>
-            <Button Grid.Column="1" Grid.Row="3" Content="扫描电子标签" Click="BeginScan" Style="{StaticResource StyleButtonBaseBackground}" Background="#333333" Opacity="0.7" FontSize="30" Foreground="#00ff90"/>
+            <Button Grid.Column="1" Grid.Row="3" Content="扫描电子标签" Click="ButtonBeginScan" Style="{StaticResource StyleButtonBaseBackground}" Background="#333333" Opacity="0.7" FontSize="30" Foreground="#00ff90"/>
         </Grid>
 
         <!--扫描结果-->

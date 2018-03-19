@@ -72,11 +72,6 @@ namespace EdibleFungusGreenhouse
             {
                 DragMove();
             }
-            try
-            {
-                DragMove();
-            }
-            catch { }
         }
 
         /// <summary>

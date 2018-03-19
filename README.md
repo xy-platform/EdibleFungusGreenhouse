@@ -3,15 +3,29 @@
 ## 前言
 本工程使用温湿度传感器、烟雾传感器、火焰传感器等对食用菌生产大棚进行监控，使用RFID技术对食用菌进行跟踪溯源。
 
-支持：.NET Framework 3.5-4.5<br>
+支持：.NET Framework 4.5<br>
 支持： Windows XP - windows 7 - Windows 10<br>
 
-Support:.NET Framework 3.5 - 4.7<br>
+Support:.NET Framework 4.5<br>
 Support: Windows XP - Windows 7 - Windows 10
+
+
+## 演示动画
+
+#### 产品管理页面
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/management.gif)   
+#### 内部环境页面
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/environment.gif)   
+#### 安全监控页面
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/monitor.gif)
 
 
 
 ## 版本更新
+
+##### 1.3（2018.3.19）
+1.完成产品管理界面，扫描电子标签功，录制此页面gif<br>
+
 ##### 1.2（2018.3.18）
 1.修改双击标题栏实现最大化、最小化事件，实现了“300毫秒检测”<br>
 2.修改窗体移动事件<br>

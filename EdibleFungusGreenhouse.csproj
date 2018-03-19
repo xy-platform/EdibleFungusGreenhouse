@@ -36,12 +36,17 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\icon_mushroom.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DeviceBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\DeviceBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Srr1100U, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\Srr1100U.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -149,6 +154,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\environment.gif" />
+    <Resource Include="Images\management.gif" />
+    <Resource Include="Images\monitor.gif" />
+    <Resource Include="Images\straw_mushroom.png" />
     <Resource Include="DLL\Data.xml" />
     <Content Include="DLL\DeviceBase.dll" />
     <Content Include="DLL\IPCameraDll.dll" />
