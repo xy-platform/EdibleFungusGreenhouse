@@ -13,11 +13,11 @@ Support: Windows XP - Windows 7 - Windows 10
 ## 演示动画
 
 #### 产品管理页面
-![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/management.gif)   
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/management.gif)   
 #### 内部环境页面
-![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/environment.gif)   
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/environment.gif)   
 #### 安全监控页面
-![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/tree/master/Images/monitor.gif)
+![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/monitor.gif)
 
 
 
