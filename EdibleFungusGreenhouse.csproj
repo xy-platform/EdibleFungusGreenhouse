@@ -44,6 +44,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\DeviceBase.dll</HintPath>
     </Reference>
+    <Reference Include="IPCameraDll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\IPCameraDll.dll</HintPath>
+    </Reference>
+    <Reference Include="MyCamer, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\MyCamer.dll</HintPath>
+    </Reference>
     <Reference Include="Srr1100U, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\Srr1100U.dll</HintPath>

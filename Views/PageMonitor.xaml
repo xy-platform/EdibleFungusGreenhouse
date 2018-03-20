@@ -65,7 +65,7 @@
                 <ColumnDefinition Width="390*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="1" Grid.Row="1">
+            <Grid x:Name="GridAlarm" Grid.Column="1" Grid.Row="1">
                 <Grid.Background>
                     <ImageBrush ImageSource="/EdibleFungusGreenhouse;component/Images/bg_dialog_red.png"/>
                 </Grid.Background>
@@ -84,7 +84,7 @@
                 <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <WrapPanel>
                         <Image Margin="30, 0" Width="60" Height="60" Source="/EdibleFungusGreenhouse;component/Images/ico_alarm.png"/>
-                        <Label Content="有火焰烟雾，请立即采取&#xd;&#xa;措施，检查阀门系统。" FontSize="25" Foreground="White" Margin="20,0"/>
+                        <Label x:Name="LabPrompt" Content="有火焰烟雾，请立即采取&#xd;&#xa;措施，检查阀门系统。" FontSize="25" Foreground="White" Margin="20,0"/>
                     </WrapPanel>
                 </Viewbox>
 
