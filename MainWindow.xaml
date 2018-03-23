@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="880" Width="1460" BorderThickness="10" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="Images/icon_mushroom.ico" 
-        MouseMove="Window_MouseMove" AllowsTransparency="True" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+       MouseDown="Window_MouseMove" AllowsTransparency="True" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
 
     <!--附加阴影效果-->
     <Window.Effect>

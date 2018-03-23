@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="112"/>
+            <RowDefinition Height="112*"/>
             <RowDefinition Height="648*"/>
             <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
@@ -49,6 +49,62 @@
                     <Image x:Name="ImageCamera" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
                 </Grid>
             </Border>
+            <Canvas  Height="170" Width="170" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/EdibleFungusGreenhouse;component/Images/btn_direction_bg.png"/>
+                </Canvas.Background>
+                <Button x:Name="ButonUp" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Left="70" Canvas.Top="14" RenderTransformOrigin="0.5,0.5" PreviewMouseLeftButtonDown="ButonUp_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="ButonUp_PreviewMouseLeftButtonUp">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="90"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+                <Button x:Name="ButonDown" Height="32" Width="32" Style="{StaticResource StyleButtonDir}"  Canvas.Left="70" Canvas.Bottom="14" RenderTransformOrigin="0.5,0.5" PreviewMouseLeftButtonDown="ButonDown_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="ButonDown_PreviewMouseLeftButtonUp">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="270"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+                <Button x:Name="ButonLeft" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Left="16" Canvas.Top="70" PreviewMouseLeftButtonDown="ButonLeft_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="ButonLeft_PreviewMouseLeftButtonUp"/>
+                <Button x:Name="ButonRight" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Right="16" Canvas.Top="70" RenderTransformOrigin="0.5,0.5" PreviewMouseLeftButtonUp="ButonRight_PreviewMouseLeftButtonUp" PreviewMouseLeftButtonDown="ButonRight_PreviewMouseLeftButtonDown" >
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="180"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+
+
+                <!--<Button x:Name="ButonUp" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Left="70" Canvas.Top="14" RenderTransformOrigin="0.5,0.5" MouseDown="ButonUp_MouseDown" MouseUp="ButonUp_MouseUp" MouseLeftButtonDown="ButonUp_MouseLeftButtonDown" MouseLeftButtonUp="ButonUp_MouseLeftButtonUp">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="90"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+                <Button x:Name="ButonDown" Height="32" Width="32" Style="{StaticResource StyleButtonDir}"  Canvas.Left="70" Canvas.Bottom="14" RenderTransformOrigin="0.5,0.5" MouseDown="ButonDown_MouseDown" MouseUp="ButonDown_MouseUp" MouseLeftButtonDown="ButonDown_MouseLeftButtonDown" MouseLeftButtonUp="ButonDown_MouseLeftButtonUp">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="270"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
+                <Button x:Name="ButonLeft" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Left="16" Canvas.Top="70" MouseDown="ButonLeft_MouseDown" MouseUp="ButonLeft_MouseUp" MouseLeftButtonDown="ButonLeft_MouseLeftButtonDown" MouseLeftButtonUp="ButonLeft_MouseLeftButtonUp"/>
+                <Button x:Name="ButonRight" Height="32" Width="32" Style="{StaticResource StyleButtonDir}" Canvas.Right="16" Canvas.Top="70" RenderTransformOrigin="0.5,0.5" MouseDown="ButonRight_MouseDown" MouseUp="ButonRight_MouseUp">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="180"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>-->
+            </Canvas>
         </Grid>
 
         <!--弹出警告框-->

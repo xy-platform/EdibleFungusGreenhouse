@@ -162,6 +162,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\btn_direction_bg.png" />
+    <Resource Include="Images\btn_dir_hover.png" />
+    <Resource Include="Images\btn_dir_normal.png" />
+    <Resource Include="Images\btn_dir_press.png" />
     <Resource Include="Images\environment.gif" />
     <Resource Include="Images\management.gif" />
     <Resource Include="Images\monitor.gif" />

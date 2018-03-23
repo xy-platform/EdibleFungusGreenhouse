@@ -47,7 +47,7 @@ namespace EdibleFungusGreenhouse.Views
                 }
                 return camera;
             }
-        } 
+        }
         #endregion
 
         #region 私有方法
@@ -94,7 +94,7 @@ namespace EdibleFungusGreenhouse.Views
         private void Page_Unloaded(object sender, RoutedEventArgs e)
         {
             DeviceHelper.Instance.OnReadCompleted -= Instance_OnReadCompleted;
-            camera.StopProcessing();
+            Camera.StopProcessing();
 
         }
         /// <summary>
@@ -113,14 +113,123 @@ namespace EdibleFungusGreenhouse.Views
         {
             if ((bool)ChkCamera.IsChecked)
             {
-                camera.StartProcessing();
+                Camera.StartProcessing();
             }
             else
             {
-                camera.StopProcessing();
+                Camera.StopProcessing();
                 ImageCamera.Source = null;
             }
         }
+        #endregion
+
+        #region 摄像头方向控制
+
+        /// <summary>
+        /// 开始向下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonDown_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanDown();
+            }
+
+        }
+
+        /// <summary>
+        /// 停止向下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonDown_PreviewMouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanDown();
+            }
+        }
+
+        ///// <summary>
+        ///// 开始向上
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        private void ButonUp_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanUp();
+            }
+        }
+
+        ///// <summary>
+        ///// 停止向上
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        private void ButonUp_PreviewMouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanUp();
+            }
+        }
+
+        /// <summary>
+        /// 开始向左
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonLeft_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera!=null)
+            {
+                camera.PanLeft();
+            }
+        }
+
+        /// <summary>
+        /// 停止向左
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonLeft_PreviewMouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanLeft();
+            }
+        }
+
+        /// <summary>
+        /// 停止向右
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonRight_PreviewMouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera!=null)
+            {
+                camera.PanRight();
+            }
+        }
+
+        /// <summary>
+        /// 开始向右
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButonRight_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (camera != null)
+            {
+                camera.PanRight();
+            }
+        }
+
         #endregion
     }
 }
