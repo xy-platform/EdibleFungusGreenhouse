@@ -15,12 +15,13 @@ Support:.NET Framework 4.5<br>
 Support: Windows XP - Windows 7 - Windows 10
 
 硬件环境：<br>
+
 ![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/device.png) 
 
-本项目开发工具：Visual Studio Community 2017 version:15.6.0
+开发工具：Visual Studio Community 2017
 
 ## 注意
-1.项目中有些地方用到了[C#6.0新特性](https://www.oschina.net/translate/new-features-in-csharp)，自动属性初始化器<br>
+1.项目中有些地方用到了[C#6.0新特性](https://www.oschina.net/translate/new-features-in-csharp)，自动属性初始化器。<br>
 
 
 ## 演示动画
