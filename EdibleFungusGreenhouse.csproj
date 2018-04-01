@@ -36,25 +36,23 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Images\icon_mushroom.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DeviceBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DeviceBase.dll</HintPath>
+    <Reference Include="DeviceBase">
+      <HintPath>..\DLL\DeviceBase.dll</HintPath>
     </Reference>
-    <Reference Include="IPCameraDll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\IPCameraDll.dll</HintPath>
+    <Reference Include="IPCameraDll">
+      <HintPath>..\DLL\IPCameraDll.dll</HintPath>
     </Reference>
-    <Reference Include="MyCamer, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\MyCamer.dll</HintPath>
+    <Reference Include="MyCamer">
+      <HintPath>..\DLL\MyCamer.dll</HintPath>
     </Reference>
-    <Reference Include="Srr1100U, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DotNet\Project\物联网工程项目集锦\EdibleFungusGreenhouse\EdibleFungusGreenhouse\DLL\Srr1100U.dll</HintPath>
+    <Reference Include="Srr1100U">
+      <HintPath>..\DLL\Srr1100U.dll</HintPath>
+    </Reference>
+    <Reference Include="Srr110uLib">
+      <HintPath>..\DLL\Srr110uLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -68,8 +66,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Utils">
       <HintPath>D:\Program Files\feiq\Recv Files\单元7\dlls\Utils.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
@@ -170,14 +167,6 @@
     <Resource Include="Images\management.gif" />
     <Resource Include="Images\monitor.gif" />
     <Resource Include="Images\straw_mushroom.png" />
-    <Resource Include="DLL\Data.xml" />
-    <Content Include="DLL\DeviceBase.dll" />
-    <Content Include="DLL\IPCameraDll.dll" />
-    <Content Include="DLL\MyCamer.dll" />
-    <Content Include="DLL\Srr1100U.dll" />
-    <Content Include="DLL\Srr110uLib.dll" />
-    <Content Include="DLL\SSUApiDesk.dll" />
-    <Content Include="DLL\Utils.dll" />
     <Resource Include="Images\bg.png" />
     <Resource Include="Images\bg_code.png" />
     <Resource Include="Images\bg_dialog_green.png" />
@@ -216,6 +205,8 @@
     <Resource Include="Images\wintl_min_nor.png" />
     <Resource Include="Images\wintl_min_press.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

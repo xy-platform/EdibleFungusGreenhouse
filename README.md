@@ -9,19 +9,39 @@
 (4)通过读取火焰、烟雾传感器的数据，判断食用菌生产大棚是否处于危险状态，如果处于危险状态则开启报警灯并且在程序界面上反馈给用户提示信息。
 
 支持：.NET Framework 4.5<br>
-支持： Windows XP - windows 7 - Windows 10<br>
+支持： Windows 7 - Windows 10<br>
 
 Support:.NET Framework 4.5<br>
-Support: Windows XP - Windows 7 - Windows 10
+Support: Windows 7 - Windows 10
 
 硬件环境：<br>
 
-![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/device.png) 
+序号 | 设备名称 | 单位 | 数目
+---|---|---|---
+1 | 温度传感器 | 个 | 1
+2 | 光照传感器 | 个 | 1
+3 | 排气扇 | 台 | 1
+4 | ZigBee四通道采集器 | 个 | 1
+5 | 超高频桌面发卡器 | 个 | 1
+6 | 火焰传感器 | 个 | 1
+7 | 烟雾传感器 | 个 | 1
+8 | 报警灯 | 个 | 1
+9 | 灯泡 | 个 | 1
+10 | 继电器 | 个 | 3
+11 | ADAM4150数字量采集器 | 个 | 1
+12 | RS-232转RS-485无源转换器 | 个 | 1
+13 | 网络摄像头 | 个 | 1
+14 | 串口服务器 | 个 | 1
+15 | 路由器 | 个 | 1
+16 | 计算机（开发） | 台 | 1
+17 | 网线 | 根 | 1 
 
 开发工具：Visual Studio Community 2017
 
 ## 注意
-1.项目中有些地方用到了[C#6.0新特性](https://www.oschina.net/translate/new-features-in-csharp)，自动属性初始化器。<br>
+1.首先要引用dll文件，否则程序运行不了，需要请Email：<hongjiapeng@hotmail.com>。<br>
+2.要想实现功能，前提要有以上硬件设备，并且还要对物联网工程环境正确安装部署（感知层、传输层等）。<br>
+3.项目中有些地方用到了[C#6.0新特性](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6)，自动属性初始化器等。<br>
 
 
 ## 演示动画
@@ -52,20 +72,22 @@ Support: Windows XP - Windows 7 - Windows 10
 
 ``` ```
 
-  		try
-            {
-                DragMove();
-            }
-            catch { }
+    try
+    {
+        DragMove();
+    }
+    catch { }
+    
 ``` ```
 修改为：
 
 ``` ```
 
-		if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
+	if (e.LeftButton == MouseButtonState.Pressed)
+    {
+        DragMove();
+    }
+    
 ``` ```  
 ##### 1.1（2018.3.8）
 1.修改App.config文件，添加数字量采集器、ZigBee四通道采集器端口等键值对信息<br>
@@ -76,4 +98,7 @@ Support: Windows XP - Windows 7 - Windows 10
 2.自定义控件（最大化、最小化、关闭按钮等）<br>
 
 
+参考文档：<br>
+1.[What's New in C# 6](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6)，中文版[C# 6 中的新增功能](https://docs.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-6) <br>
+2.[New Features in C# 6.0](https://www.codeproject.com/Articles/874205/New-features-in-Csharp)，中文版[C# 6.0 的新特性](https://www.oschina.net/translate/new-features-in-csharp)
 
