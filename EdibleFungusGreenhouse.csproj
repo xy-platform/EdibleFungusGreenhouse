@@ -205,8 +205,6 @@
     <Resource Include="Images\wintl_min_nor.png" />
     <Resource Include="Images\wintl_min_press.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,10 +63,10 @@ Support: Windows 7 - Windows 10
 3.新增监控页面摄像头方向控制功能，界面如下。<br>
 ![image](https://github.com/hongjiapeng/EdibleFungusGreenhouse/blob/master/Images/dir_control.png) 
 
-##### 1.3（2018.3.19）
+##### 1.3（2018.3.10）
 1.完成产品管理界面，扫描电子标签功能，录制此页面gif<br>
 
-##### 1.2（2018.3.18）
+##### 1.2（2018.2.18）
 1.修改双击标题栏实现最大化、最小化事件，实现了“300毫秒检测”<br>
 2.修改窗体移动事件<br>
 
@@ -89,16 +89,17 @@ Support: Windows 7 - Windows 10
     }
     
 ``` ```  
-##### 1.1（2018.3.8）
+##### 1.1（2018.2.8）
 1.修改App.config文件，添加数字量采集器、ZigBee四通道采集器端口等键值对信息<br>
 2.新增 主页、产品管理、内部环境、安全监控Page
 
-##### 1.0（2018.3.4）
+##### 1.0（2018.2.4）
 1.窗体无边框设计<br>
 2.自定义控件（最大化、最小化、关闭按钮等）<br>
 
 
 参考文档：<br>
 1.[What's New in C# 6](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6)，中文版[C# 6 中的新增功能](https://docs.microsoft.com/zh-cn/dotnet/csharp/whats-new/csharp-6) <br>
-2.[New Features in C# 6.0](https://www.codeproject.com/Articles/874205/New-features-in-Csharp)，中文版[C# 6.0 的新特性](https://www.oschina.net/translate/new-features-in-csharp)
+2.[New Features in C# 6.0](https://www.codeproject.com/Articles/874205/New-features-in-Csharp)，中文版[C# 6.0 的新特性](https://www.oschina.net/translate/new-features-in-csharp)<br>
+3.[一小时学会 C# 6 的新特性](http://blog.jobbole.com/96860/)
 
